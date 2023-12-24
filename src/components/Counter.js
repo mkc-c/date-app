@@ -39,7 +39,9 @@ function Counter() {
     if (date.toDateString() === new Date().toDateString() || date === 0) {
       return `Today is ${formattedDate()}`;
     } else {
-      return `${Math.abs(count)} days from today is ${formattedDate()}`;
+      return `${Math.abs(count)} day${
+        Math.abs(count) !== 1 ? "s" : ""
+      } from today is ${formattedDate()}`;
     }
   }
 
