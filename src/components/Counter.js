@@ -49,12 +49,12 @@ function Counter() {
     <div className="counter">
       <div className="counter__steps">
         <button onClick={handleStepDown}>-</button>
-        <span>{steps}</span>
+        <span>Step: {steps}</span>
         <button onClick={handleStepUp}>+</button>
       </div>
       <div className="counter__count">
         <button onClick={handleCountDown}>-</button>
-        <span>{count}</span>
+        <span>Count: {count}</span>
         <button onClick={handleCountUp}>+</button>
       </div>
       <div className="counter__date">{renderedDate()}</div>
