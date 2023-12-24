@@ -32,7 +32,7 @@ function Counter() {
   }
 
   function formattedDate() {
-    if (date) return date.toDateString();
+    return date.toDateString();
   }
 
   function renderedDate() {
