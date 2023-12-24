@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 
 function Counter() {
   const [steps, setSteps] = useState(1);
@@ -40,7 +39,7 @@ function Counter() {
     if (date.toDateString() === new Date().toDateString() || date === 0) {
       return `Today is ${formattedDate()}`;
     } else {
-      return `${Math.absolute(count)} days from today is ${formattedDate()}`;
+      return `${Math.abs(count)} days from today is ${formattedDate()}`;
     }
   }
 
