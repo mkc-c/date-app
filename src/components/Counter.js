@@ -3,7 +3,10 @@ import { useState } from "react";
 function Counter() {
   const [steps, setSteps] = useState(1);
   const [count, setCount] = useState(0);
-  const [date, setDate] = useState(new Date());
+  // const [date, setDate] = useState(new Date());
+
+  const date = new Date();
+  date.setDate(date.getDate() + count);
 
   function handleStepDown() {
     setSteps((currentStep) => currentStep - 1);
@@ -14,21 +17,11 @@ function Counter() {
   }
 
   function handleCountDown() {
-    setCount((currentCount) => {
-      if (steps === 1) return count - 1;
-      else return currentCount - steps;
-    });
-
-    setDate(new Date(date.setDate(date.getDate() - 1)));
+    setCount((prevCount) => prevCount - steps);
   }
 
   function handleCountUp() {
-    setCount((currentCount) => {
-      if (steps === 1) return count + 1;
-      else return currentCount + steps;
-    });
-
-    setDate(new Date(date.setDate(date.getDate() + 1)));
+    setCount((prevCount) => prevCount + steps);
   }
 
   function formattedDate() {
