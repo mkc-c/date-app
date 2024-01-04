@@ -9,11 +9,11 @@ function Counter() {
   date.setDate(date.getDate() + count);
 
   function handleStepDown() {
-    setSteps((currentStep) => currentStep - 1);
+    setSteps((prevStep) => prevStep - 1);
   }
 
   function handleStepUp() {
-    setSteps((currentStep) => currentStep + 1);
+    setSteps((prevStep) => prevStep + 1);
   }
 
   function handleCountDown() {
